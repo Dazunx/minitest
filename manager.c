@@ -40,7 +40,7 @@ void saveData(Product p[], int count){
 
 	//중량 가격 제품명
 	fp= fopen("product.txt","wt");
-	
+	fprintf(fp,"%d %d %s\n",p->weight,p->price,p->name);	
 	
 	fclose(fp);
 	printf("저장됨!\n");
@@ -50,7 +50,7 @@ void saveData(Product p[], int count){
 //파일에서 데이터 불러오는 함수
 int loadData(Product *p){
 	int count=0;
-	FILE*fp;
+	//FILE*fp;
 
 	//파일 내용을 읽어와서 배열에 값 추가하기
 
